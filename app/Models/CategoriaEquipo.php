@@ -10,4 +10,10 @@ class CategoriaEquipo extends Model
     use HasFactory;
 
     protected $fillable = ['nombre','descripcion'];
+
+
+    public function Equipos()
+    {
+        return $this->belongsTo('contratista\Equipo');
+    }
 }

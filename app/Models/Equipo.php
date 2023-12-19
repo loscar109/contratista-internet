@@ -9,5 +9,13 @@ class Equipo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['mac'];
+    protected $fillable = ['mac', 'categoria_id'];
+
+
+    public function categoriaEquipos()
+    {
+        return $this->belongsTo('contratista\CategoriaEquipo');
+    }
+
+
 }
