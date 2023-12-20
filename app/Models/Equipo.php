@@ -9,7 +9,7 @@ class Equipo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['mac', 'categoria_id'];
+    protected $fillable = ['mac', 'categoria_equipos_id'];
 
 
     public function categoriaEquipos()
