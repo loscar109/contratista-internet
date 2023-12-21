@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class GrupoTrabajo extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['categoria_trabajos_id'];
+
+
+    public function categoriaTrabajo()
+    {
+        return $this->belongsTo('contratista\categoriaTrabajo');
+    }
+
 }

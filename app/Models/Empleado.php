@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Empleado extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'codigo_tecnico',
+        'dni',
+        'nombre',
+        'apellido'
+
+    ];
 }
