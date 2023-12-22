@@ -13,7 +13,7 @@ class EntregaEquipoController extends Controller
      */
     public function index()
     {
-        //
+        return view('entrega_equipos');
     }
 
     /**
