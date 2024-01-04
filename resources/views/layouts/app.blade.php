@@ -13,8 +13,14 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <!-- Select2 -->
+    <link href=" https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css " rel="stylesheet">
+
+<!-- Scripts -->
+@vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+
+
 </head>
 <body>
     <div id="app">
@@ -26,6 +32,10 @@
                 <a class="navbar-brand" href="{{ url('/entrega_equipos') }}">
                     Entrega de Equipos
                 </a>
+                <a class="navbar-brand" href="{{ url('/tareas') }}">
+                    Tareas
+                </a>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -79,5 +89,12 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Select2 -->
+    <script src=" https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js "></script>
+
 </body>
 </html>

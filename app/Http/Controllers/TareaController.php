@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreMaterialRequest;
-use App\Http\Requests\UpdateMaterialRequest;
-use App\Models\Material;
+use App\Http\Requests\StoreTareaRequest;
+use App\Http\Requests\UpdateTareaRequest;
+use App\Models\Tarea;
 
-class MaterialController extends Controller
+class TareaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $tareas = Tarea::all();
+        return view('tarea',["tareas"=>$tareas]);
+
+     
+
     }
 
     /**
@@ -27,7 +31,7 @@ class MaterialController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreMaterialRequest $request)
+    public function store(StoreTareaRequest $request)
     {
         //
     }
@@ -35,7 +39,7 @@ class MaterialController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Material $material)
+    public function show(Tarea $tarea)
     {
         //
     }
@@ -43,7 +47,7 @@ class MaterialController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Material $material)
+    public function edit(Tarea $tarea)
     {
         //
     }
@@ -51,7 +55,7 @@ class MaterialController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateMaterialRequest $request, Material $material)
+    public function update(UpdateTareaRequest $request, Tarea $tarea)
     {
         //
     }
@@ -59,7 +63,7 @@ class MaterialController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Material $material)
+    public function destroy(Tarea $tarea)
     {
         //
     }
