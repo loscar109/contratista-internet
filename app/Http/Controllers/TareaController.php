@@ -14,7 +14,7 @@ class TareaController extends Controller
     public function index()
     {
         $tareas = Tarea::all();
-        return view('tarea',["tareas"=>$tareas]);
+        return view('tareas/index',["tareas"=>$tareas]);
 
      
 
