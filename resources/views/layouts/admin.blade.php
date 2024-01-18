@@ -226,7 +226,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="tareas/" class="nav-link active">
+                <a href="{{asset('tareas')}}" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>tareas index</p>
                 </a>
