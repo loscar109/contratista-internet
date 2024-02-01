@@ -20,8 +20,9 @@ class DatabaseSeeder extends Seeder
         $this->call(EquipoSeeder::class);
         $this->call(CategoriaTrabajoSeeder::class);
         $this->call(GrupoTrabajoSeeder::class);
-        $this->call(EmpleadoGrupoSeeder::class);
+        //php$this->call(EmpleadoGrupoSeeder::class);
         $this->call(TareaSeeder::class);
+        $this->call(VehiculoSeeder::class);
 
         
 

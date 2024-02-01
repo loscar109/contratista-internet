@@ -22,3 +22,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/entrega_equipos', [App\Http\Controllers\EntregaEquipoController::class, 'index'])->name('entrega_equipos');
 Route::get('/tareas', [App\Http\Controllers\TareaController::class, 'index'])->name('tarea');
+Route::get('/empleados', [App\Http\Controllers\EmpleadoController::class, 'index'])->name('empleado');
+Route::delete('/empleados/{empleado}', [App\Http\Controllers\EmpleadoController::class, 'destroy'])->name('empleados.destroy');
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+Route::get('/vehiculos', [App\Http\Controllers\VehiculoController::class, 'index'])->name('vehiculo');

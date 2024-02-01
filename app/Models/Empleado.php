@@ -13,7 +13,9 @@ class Empleado extends Model
         'codigo_tecnico',
         'dni',
         'nombre',
-        'apellido'
+        'apellido',
+        'foto_perfil',
+        'nacimiento',
 
     ];
 }

@@ -36,10 +36,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
+
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -52,7 +49,10 @@
         <a href="home" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/index3.html" class="nav-link">Contacto</a>
+        <a href="/index3.html" class="nav-link">Plantilla de referencia</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{ route('logout') }}" class="nav-link">Salir</a>
       </li>
     </ul>
 
@@ -222,7 +222,25 @@
               </p>
             </a>
           </li>
-       
+          <li class="nav-header">Personal</li>
+          <li class="nav-item">
+            <a href="empleados" class="nav-link">
+              <i class="nav-icon fa fa-users"></i>
+              <p>
+                Empleados (sin livewire)
+              </p>
+            </a>
+          </li>
+          <li class="nav-header">Rodado</li>
+          <li class="nav-item">
+            <a href="vehiculos" class="nav-link">
+              <i class="nav-icon fa fa-car"></i>
+              <p>
+                Vehiculos (usando livewire)
+              </p>
+            </a>
+          </li>
+          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -304,8 +322,7 @@
 <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('dist/js/demo.js')}}"></script>
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
 <!-- Select2 -->

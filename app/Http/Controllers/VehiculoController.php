@@ -13,7 +13,8 @@ class VehiculoController extends Controller
      */
     public function index()
     {
-        //
+        $vehiculos= Vehiculo::all();
+        return view('vehiculos/index',["vehiculos"=>$vehiculos]);
     }
 
     /**

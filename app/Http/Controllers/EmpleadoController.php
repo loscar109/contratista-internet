@@ -13,7 +13,8 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        //
+        $empleados= Empleado::all();
+        return view('empleados/index',["empleados"=>$empleados]);
     }
 
     /**
@@ -61,6 +62,15 @@ class EmpleadoController extends Controller
      */
     public function destroy(Empleado $empleado)
     {
-        //
+        // Verificar si el empleado existe
+        if (!$empleado) {
+            return redirect()->route('empleados.index')->with('error', 'El empleado no existe.');
+        }
+
+        // Eliminar el empleado
+        $empleado->delete();
+
+        // Redireccionar con un mensaje de éxito
+        return redirect()->route('empleado')->with('success', 'Empleado eliminado correctamente.');
     }
 }

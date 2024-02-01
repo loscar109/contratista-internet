@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string("dni");
             $table->string("nombre");
             $table->string("apellido");
+            $table->string("foto_perfil");
+            $table->date("nacimiento");
             $table->timestamps();
         });
     }
